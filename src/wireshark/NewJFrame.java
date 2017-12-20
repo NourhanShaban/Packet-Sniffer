@@ -675,6 +675,7 @@ public static PcapDumper dumper;
                     rowData2[2] = destinationIP;
                     rowData2[3] = "IP";
                     model2.addRow(rowData2);
+                    
 
                   //  System.out.println("srcIP=" + sourceIP
                    //         + " dstIP=" + destinationIP
