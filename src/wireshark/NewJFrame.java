@@ -483,9 +483,9 @@ public static PcapDumper dumper;
                             }
                             if (packet.hasHeader(eth)) {
 
-                                System.out.println("Ethernet type:\t" + eth.typeEnum());
-                                System.out.println("Ethernet src:\t" + FormatUtils.mac(eth.source()));
-                                System.out.println("Ethernet dst:\t" + FormatUtils.mac(eth.destination()));
+//                                 System.out.println("Ethernet type:\t" + eth.typeEnum());
+//                                 System.out.println("Ethernet src:\t" + FormatUtils.mac(eth.source()));
+//                                 System.out.println("Ethernet dst:\t" + FormatUtils.mac(eth.destination()));
                                 String hexdump = packet.toHexdump(packet.size(), false, false, true);
 
                                 index = j++;
@@ -497,8 +497,8 @@ public static PcapDumper dumper;
 
                                 if (packet.hasHeader(payload)) {
                                     payloadContent = payload.getPayload();
-                                    System.out.println("Payload:\n");
-                                    System.out.println("Payload header:\t" + payload.toString());
+//                                     System.out.println("Payload:\n");
+//                                     System.out.println("Payload header:\t" + payload.toString());
                                     payload1 = "Payload header:\t" + payload.toString();
 
                                  
@@ -521,16 +521,16 @@ public static PcapDumper dumper;
                                 rowData2[3] = "TCP";
                                 model2.addRow(rowData2);
 
-                                System.out.println("TCP src port:\t" + tcp.source());
-                                System.out.println("TCP dst port:\t" + tcp.destination());
-                                System.out.println("Tcp acknowledge:\t" + tcp.ack());
+//                                 System.out.println("TCP src port:\t" + tcp.source());
+//                                 System.out.println("TCP dst port:\t" + tcp.destination());
+//                                 System.out.println("Tcp acknowledge:\t" + tcp.ack());
 
                                 System.out.println("Tcp header:\t" + tcp.toString());
 
                                 if (packet.hasHeader(payload)) {
                                     payloadContent = payload.getPayload();
-                                    System.out.println("Payload:\n");
-                                    System.out.println("Payload header:\t" + payload.toString());
+//                                     System.out.println("Payload:\n");
+//                                     System.out.println("Payload header:\t" + payload.toString());
                                     payload1 = "Payload header:\t" + payload.toString();
 
                                     //jTextArea2.append("Payload:\n" + "\n" + "Payload header:\t" + payload.toString() + "\n");
@@ -547,16 +547,16 @@ public static PcapDumper dumper;
                                 rowData2[2] = udp.destination();
                                 rowData2[3] = "UDP";
                                 model2.addRow(rowData2);
-                                System.out.println("UDP src port:\t" + udp.source());
-                                System.out.println("UDP dst port:\t" + udp.destination());
-                                System.out.println("UDP Checksum:\t" + udp.checksum());
+//                                 System.out.println("UDP src port:\t" + udp.source());
+//                                 System.out.println("UDP dst port:\t" + udp.destination());
+//                                 System.out.println("UDP Checksum:\t" + udp.checksum());
 
-                                System.out.println("UDP header:\t" + udp.toString());
+//                                 System.out.println("UDP header:\t" + udp.toString());
 
                                 if (packet.hasHeader(payload)) {
                                     payloadContent = payload.getPayload();
-                                    System.out.println("Payload:\n");
-                                    System.out.println("Payload header:\t" + payload.toString());
+//                                     System.out.println("Payload:\n");
+//                                     System.out.println("Payload header:\t" + payload.toString());
                                     payload1 = "Payload header:\t" + payload.toString();
 
                                 }
