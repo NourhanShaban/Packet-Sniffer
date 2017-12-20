@@ -466,19 +466,19 @@ public static PcapDumper dumper;
                                     System.out.println("Payload header:\t" + payload.toString());
                                     payload1 = "Payload header:\t" + payload.toString();
 
-                                    //jTextArea2.append("Payload:\n" + "\n" + "Payload header:\t" + payload.toString() + "\n");
+                                 
                                 }
 
                                 data1 = "srcIP=" + sourceIP + "\n" + " dstIP=" + destinationIP + "\n" + " caplen=" + packet.getCaptureHeader().caplen() + "\n" + "type= " + type + "\n" + "IP checksum:\t" + ip.checksum() + "\n" + "IP header:\t" + ip.toString() + "\n";
                                 Packet p1 = new Packet(index, data1, payload1);
                                 l.add(p1);
 
-                                System.out.println("srcIP=" + sourceIP
-                                        + " dstIP=" + destinationIP
-                                        + " caplen=" + packet.getCaptureHeader().caplen() + "type= " + type);
-                                System.out.println("IP checksum:\t" + ip.checksum());
+//                                 System.out.println("srcIP=" + sourceIP
+//                                         + " dstIP=" + destinationIP
+//                                         + " caplen=" + packet.getCaptureHeader().caplen() + "type= " + type);
+//                                 System.out.println("IP checksum:\t" + ip.checksum());
 
-                                System.out.println("IP header:\t" + ip.toString());
+//                                 System.out.println("IP header:\t" + ip.toString());
 
                             }
                             if (packet.hasHeader(eth)) {
@@ -501,7 +501,7 @@ public static PcapDumper dumper;
                                     System.out.println("Payload header:\t" + payload.toString());
                                     payload1 = "Payload header:\t" + payload.toString();
 
-                                    //jTextArea2.append("Payload:\n" + "\n" + "Payload header:\t" + payload.toString() + "\n");
+                                 
                                 }
                                 data1 = "Ethernet type:\t" + eth.typeEnum() + "\n" + "Ethernet src:\t" + FormatUtils.mac(eth.source()) + "\n" + "Ethernet dst:\t" + FormatUtils.mac(eth.destination());
                                 Packet p1 = new Packet(index, data1, payload1);
